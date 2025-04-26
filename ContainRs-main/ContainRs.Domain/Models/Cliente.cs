@@ -1,4 +1,4 @@
-﻿namespace ContainRs.WebApp.Models;
+﻿namespace ContainRs.Domain.Models;
 
 public class Cliente
 {
