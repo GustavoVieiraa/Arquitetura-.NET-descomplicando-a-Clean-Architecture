@@ -1,15 +1,24 @@
-﻿using ContainRs.WebApp.Models;
+﻿using ContainRs.Application.Repositories;
+using ContainRs.Domain.Models;
+using ContainRs.WebApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContainRs.WebApp.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IClienteRepository
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
 
     public DbSet<Cliente> Clientes { get; set; }
+
+    public async Task<Cliente> AddASync(Cliente cliente)
+    {
+        await Clientes.AddAsync(cliente);
+        await SaveChangesAsync();
+        return cliente;
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

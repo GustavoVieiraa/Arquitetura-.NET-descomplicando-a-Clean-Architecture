@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContainRs.WebApp\ContainRs.WebApp.csproj" />
+    <ProjectReference Include="..\ContainRs.Domain\ContainRs.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
