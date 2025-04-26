@@ -8,6 +8,11 @@ public class RegistroViewModel
     [Required(ErrorMessage = "Campo obrigatório.")]
     public string Nome { get; set; }
 
+    [Display(Name = "Nascimento (*)")]
+    [Required(ErrorMessage = "Campo obrigatório.")]
+    [DataType(DataType.Date)]
+    public DateTime Nascimento { get; set; }
+
     [Display(Name = "E-mail (*)", Prompt = "Digite seu melhor e-mail.")]
     [Required(ErrorMessage = "Campo obrigatório.")]
     [EmailAddress(ErrorMessage = "E-mail inválido.")]
