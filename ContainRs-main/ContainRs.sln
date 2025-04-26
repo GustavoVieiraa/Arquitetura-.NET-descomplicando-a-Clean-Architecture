@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainRs.Tests", "ContainR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainRs.Domain", "ContainRs.Domain\ContainRs.Domain.csproj", "{7BB1FFB3-E81D-4116-AD91-8DF66690F15D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainRs.Application", "ContainRs.Application\ContainRs.Application.csproj", "{51C5BE44-5CC2-434A-985A-7539A989C5AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{7BB1FFB3-E81D-4116-AD91-8DF66690F15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB1FFB3-E81D-4116-AD91-8DF66690F15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB1FFB3-E81D-4116-AD91-8DF66690F15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C5BE44-5CC2-434A-985A-7539A989C5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C5BE44-5CC2-434A-985A-7539A989C5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C5BE44-5CC2-434A-985A-7539A989C5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C5BE44-5CC2-434A-985A-7539A989C5AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
