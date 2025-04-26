@@ -1,5 +1,6 @@
 ﻿using ContainRs.WebApp.Data;
 using ContainRs.WebApp.Models;
+using ContainRs.WebApp.UseCases;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContainRs.WebApp.Controllers
@@ -18,19 +19,14 @@ namespace ContainRs.WebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAsync(RegistroViewModel request)
         {
-            var cliente = new Cliente(request.Nome, new Email(request.Email), request.CPF)
-            {
-                Celular = request.Celular,
-                CEP = request.CEP,
-                Rua = request.Rua,
-                Numero = request.Numero,
-                Complemento = request.Complemento,
-                Bairro = request.Bairro,
-                Municipio = request.Municipio,
-                Estado = request.Estado
-            };
-            context.Clientes.Add(cliente);
-            await context.SaveChangesAsync();
+            var useCase = new RegistrarCliente
+                (
+                    context, request.Nome, new Email(request.Email), request.CPF, request.Celular, request.CEP, request.Rua,
+                    request.Numero, request.Complemento, request.Bairro, request.Municipio, request.Estado
+                );
+
+            await useCase.ExecutarAsync();
+
             return Ok();
         }
     }
