@@ -23,5 +23,5 @@ public class Cliente
     public string? Bairro { get; set; }
     public string? Municipio { get; set; }
     public string? Cidade { get; set; }
-    public string? Estado { get; set; }
+    public UnidadeFederativa? Estado { get; set; }
 }
