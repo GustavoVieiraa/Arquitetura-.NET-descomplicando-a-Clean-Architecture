@@ -32,7 +32,7 @@ public class RegistroController : Controller
         var useCase = new RegistrarCliente
         (
             context, form.Nome, new Email(form.Email), form.CPF, form.Celular, form.CEP, form.Rua,
-            form.Numero, form.Complemento, form.Bairro, form.Municipio, form.Estado
+            form.Numero, form.Complemento, form.Bairro, form.Municipio, UfStringConverter.From(form.Estado)
         );
 
 
